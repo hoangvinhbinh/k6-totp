@@ -13,6 +13,7 @@ type TOTP struct{}
 
 // init function to register the TOTP module
 func init() {
+	fmt.Println("Initializing TOTP module")
 	modules.Register("k6/x/totp", new(TOTP))
 }
 
