@@ -1,6 +1,7 @@
 package totp
 
 import (
+	"fmt"
 	"time"
 
 	"github.com/pquerna/otp/totp"
@@ -17,6 +18,7 @@ type TOTP struct{}
 
 // Generate function to create a TOTP token based on a secret
 func (t *TOTP) Generate(secret string) (string, error) {
+	fmt.Println("Generate method called") // Debugging line
 	token, err := totp.GenerateCode(secret, time.Now())
 	if err != nil {
 		return "", err
