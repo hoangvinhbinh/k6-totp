@@ -1,0 +1,24 @@
+package totp
+
+import (
+    "go.k6.io/k6/js/modules"
+    "github.com/pquerna/otp/totp"
+    "time"
+)
+
+// Register the extension as a module
+func init() {
+    modules.Register("k6/x/totp", new(TOTP))
+}
+
+// Define the TOTP structure with functions you want to expose to `k6`
+type TOTP struct{}
+
+// Generate a TOTP token
+func (t *TOTP) Generate(secret string) (string, error) {
+    token, err := totp.GenerateCode(secret, time.Now())
+    if err != nil {
+        return "", err
+    }
+    return token, nil
+}
