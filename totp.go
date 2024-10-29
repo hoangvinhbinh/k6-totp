@@ -8,13 +8,13 @@ import (
 	"go.k6.io/k6/js/modules"
 )
 
-// init registers the TOTP module with k6
+// TOTP structure
+type TOTP struct{}
+
+// init function to register the TOTP module
 func init() {
 	modules.Register("k6/x/totp", new(TOTP))
 }
-
-// TOTP structure for generating TOTP tokens
-type TOTP struct{}
 
 // Generate function to create a TOTP token based on a secret
 func (t *TOTP) Generate(secret string) (string, error) {
