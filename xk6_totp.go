@@ -2,9 +2,7 @@ package xk6_totp
 
 import (
 	"fmt"
-	"time"
 
-	"github.com/pquerna/otp/totp"
 	"go.k6.io/k6/js/modules"
 )
 
