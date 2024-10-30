@@ -10,7 +10,7 @@ import (
 
 // init function to register the TOTP module
 func init() {
-	fmt.Println("Initializing x TOTP module")
+	fmt.Println("Initializing xk6 TOTP module")
 	modules.Register("k6/x/xk6_totp", new(TOTP))
 }
 
