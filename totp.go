@@ -17,6 +17,10 @@ func init() {
 	modules.Register("k6/x/totp", new(TOTP))
 }
 
+func (*TOTP) Hello(name string) string {
+	return "Hello " + name
+}
+
 // Generate function to create a TOTP token based on a secret
 func (t *TOTP) Generate(secret string) (string, error) {
 	fmt.Println("Generate method called") // Debugging line
