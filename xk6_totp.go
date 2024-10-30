@@ -19,7 +19,7 @@ type TOTP struct{}
 
 // Generate generates a TOTP token for the given secret.
 func (t *TOTP) Generate(secret string) (string, error) {
-	fmt.Println("Generate method called") // Debugging line
+	//fmt.Println("Generate method called") // Debugging line
 	token, err := totp.GenerateCode(secret, time.Now())
 	if err != nil {
 		return "", err
