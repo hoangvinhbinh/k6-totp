@@ -18,8 +18,8 @@ require (
 	github.com/go-sourcemap/sourcemap v2.1.4+incompatible // indirect
 	github.com/google/pprof v0.0.0-20240827171923-fa2c70bbbfe5 // indirect
 	github.com/google/uuid v1.6.0 // indirect
-	// github.com/grafana/sobek v0.0.0-20240829081756-447e8c611945 // indirect
-	github.com/dop251/goja v0.0.0-20220310134205-bd4181313a62
+	github.com/grafana/sobek v0.0.0-20240829081756-447e8c611945 // indirect
+	//github.com/dop251/goja v0.0.0-20220310134205-bd4181313a62
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.22.0 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
